@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using GlobalReporter;
 using System.IO;
 using System.Reflection;
-using GlobalReporter;
 using Pechkin;
 //using Pechkin.Synchronized;
 using System.Drawing.Printing;

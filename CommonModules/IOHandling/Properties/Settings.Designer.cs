@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataHandling.Properties {
+namespace IOHandling.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
