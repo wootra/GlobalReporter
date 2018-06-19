@@ -1,0 +1,113 @@
+@@COVER_PAGE
+//TARGETING TEST RESULT
+>>통합점검
+%CHART:sarea,stacked_area_chart,["name1","name2"],[["test1", 10,99], ["test2", 20,99], ["test3", 30,99], ["test4", 90,99], ["test5", 80,99]]
+%CHART:area,area_chart,["name1","name2"],[["test1", 10,99], ["test2", 20,99], ["test3", 30,99], ["test4", 90,99], ["test5", 80,99]]
+%CHART:line,line_chart,["name1","name2"],[["test1", 10,99], ["test2", 20,99], ["test3", 30,99], ["test4", 90,99], ["test5", 80,99]]
+%CHART:bar,bar_chart,["name1","name2"],[["test1", 10,99], ["test2", 20,99], ["test3", 30,99], ["test4", 90,99], ["test5", 80,99]]
+%CHART:sbar,s_bar_chart,["name1","name2"],[["test1", 10,99], ["test2", 20,99], ["test3", 30,99], ["test4", 90,99], ["test5", 80,99]]
+%CHART:barh,bar_h_chart,["name1","name2"],[["test1", 10,99], ["test2", 20,99], ["test3", 30,99], ["test4", 90,99], ["test5", 80,99]]
+%CHART:sbarh,s_bar_h_chart,["name1","name2"],[["test1", 10,99], ["test2", 20,99], ["test3", 30,99], ["test4", 90,99], ["test5", 80,99]]
+%CHART:spline,spline_chart,["name1","name2"],[["test1", 10,99], ["test2", 20,99], ["test3", 30,99], ["test4", 90,99], ["test5", 80,99]]
+%CHART:scatter,scatter_chart,["name1","name2"],[[[100,200],[1,2],[5,7],[10,12]],[[10,20],[14,25],[56,72],[11,19]]]
+%CHART:pie,pie_chart,["n1","n2","n3","n4"],[100,30,50,15]
+%CHART:3dpie,3dpie_chart,["n1","n2","n3","n4"],[100,30,50,15]
+%CHART:donut,donut_chart,["n1","n2","n3","n4"],[100,30,50,15]
+%CHART:radar,radar_chart,["n1","n2","n3","n4"],[100,30,50,15]
+#CHART_AREA
+spline_chart
+#IMG_SAMPLE=img_sample,테이블테스트
+externals/desert.jpg,@NAME,pie_chart
+#CHART_SAMPLE=차트샘플.
+stacked_area_chart,area_chart,line_chart
+scatter_chart,3dpie_chart,donut_chart
+radar_chart,bar_chart,s_bar_chart
+bar_h_chart,s_bar_h_chart
+
+#4CELL_TABLE_LEVEL=BIT점검,제목1
+%TITLE:항목,비교값,측정값,결과
+%ROW(0):DEV_STS,0x0000, 0x0000, OK
+%ROW(1):GPS_STS,0x00000, 0x00000, OK
+%ROW(2):CAS1_STS,0x00, 0x00, OK
+%ROW(3):CAS2_STS,0x00, 0x00, OK
+%ROW(4):ESADF_SFS,0x00, 0x00, OK
+%TABLE_RESULT:OK
+@@BASIC_PAGE
+#4CELL_TABLE_LEVEL=TARGET POSITION,제목1
+%TITLE:항목,비교값,측정값,결과
+Target LAT,0.000, 0.000, OK
+Target LON,0.000, 0.000, OK
+Target ALT,0.000, 0.000, OK
+%TABLE_RESULT:OK
+#4CELL_TABLE=LAUNCH POSITION,제목2
+%TITLE:항목,비교값,측정값,결과
+Launch LAT,0.000, 0.000, OK
+Launch LON,0.000, 0.000, OK
+Launch ALT,0.000, 0.000, OK
+Launch Heading,0.000, 0.000, OK
+%TABLE_RESULT:OK
+#4CELL_TABLE=ESADF INFO,제목2
+%TITLE:항목,비교값,측정값,결과
+ESADF SELECT,고폭탄두, 고폭탄두, OK
+ESADF MODE,순 발, 순 발, OK
+%TABLE_RESULT,OK
+#2CELL_TABLE=ALIGNMENT,테이블테스트
+%TITLE:항목,측정값
+Transfer Alignment,초기화
+Self Alignment,0.000000
+
+>>LOAD AND LAUNCH TEST RESULT
+#4CELL_TABLE=LOAD TEST,테이블테스트
+%TITLE:항목,비교값,측정값,결과
+Target LAT,0.00000, 0.00000, OK
+Target LON,0.00000, 0.00000, OK
+Target ALT,0.00000, 0.00000, OK
+Launch LAT,0.00000, 0.00000, OK
+Launch LON,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+Launch ALT,0.00000, 0.00000, OK
+
+%TABLE_RESULT:OK
+#2CELL_TABLE=LOAD TEST2,테이블테스트
+%TITLE:항목,결과
+Nav Mode,통합항법
+Thermal Battery Status,정상
+%TABLE_RESULT:OK

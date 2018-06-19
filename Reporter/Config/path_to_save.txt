@@ -1,0 +1,1 @@
+﻿reports\report_%@ID%_%yyyy%%MM%%dd%_%HH%%mm%%ss%

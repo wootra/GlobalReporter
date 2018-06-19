@@ -1,0 +1,4 @@
+﻿//data/FCC_data.txt[MULTIBYTE]
+//data/result.txt[MULTIBYTE]
+data/Report.txt[MULTIBYTE]
+//%REMOVE_THIS_FILES

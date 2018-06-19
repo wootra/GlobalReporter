@@ -1,0 +1,147 @@
+﻿<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>[@REPORT_TITLE]</title>
+<style type="text/css">
+.table_style {
+	border: 2px solid #000;
+	text-align:center;
+	width:100%;
+}
+.table_around{
+	border:none;
+	
+    page-break-after :  avoid;
+    page-break-inside : avoid;
+}
+.cell_around{
+	text-align:center;
+	vertical-align:top;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: center;
+}
+
+td {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	border-left-color: #000;
+	text-align: center;
+	font-size: 11px;
+	margin: 0px;
+	padding: 0px;
+}
+.head_style {
+	font-size: 30px;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	vertical-align: top;
+}
+.big_cell_style {
+	text-align: left;
+	vertical-align: top;
+	line-height: 22px;
+	padding: 5px;
+}
+.inner_table_style {
+	border: 1px solid #000;
+	padding: 0px;
+	margin: 0px;
+	width:100%;
+}
+.PASS
+{
+    font-weight:bolder;
+    color:#00CC00;
+}
+.FAIL
+{
+    font-weight:bolder;
+    color:#CC0000;
+}
+</style>
+<link rel="stylesheet" href="externals/dhtmlxchart_full.css"/>
+<script type="text/javascript" src = "externals/dhtmlxchart_full.js"></script>
+<script type="text/javascript" src = "externals/dxchart_maker.js"></script>
+
+<script type="text/javascript">
+<!--
+
+  
+    var drawAllChart = function () {
+        
+        [%CHARTLIST]
+        
+    };
+
+    window.onload = function () {
+        
+        drawAllChart();
+    };
+    //-->
+</script>
+
+</head>
+
+<body>
+
+<table class="table_around" style="width:100%">
+<TR>
+<td height="50" colspan="3" class="cell_around">&nbsp;<!--상단여백--></td>
+</TR>
+
+<tr>
+<td class="cell_around" style="width:50px;"><!--좌측여백--></td>
+<td class="cell_around" width="[@CONTENT_WIDTH]">
+<table border="1" cellpadding="1" cellspacing="0" class="table_style">
+  <tr>
+    <td height="60" colspan="4" class="head_style">[@REPORT_TITLE:보고서명]</td>
+  </tr>
+  <tr>
+    <td width="103" height="23">일련 번호</td>
+    <td width="229">[@ID:일련번호]</td>
+    <td width="110">점검자명</td>
+    <td width="220">[@NAME:점검자명]</td>
+  </tr>
+  <tr>
+    <td height="23">점검 항목</td>
+    <td>[@TEST_CONTENT:점검항목]</td>
+    <td>페이지번호</td>
+    <td>[%PAGE_NUM]</td>
+  </tr>
+  <tr>
+    <td height="23">점검 장소</td>
+    <td>[@TEST_LOCATION:점검장소]</td>
+    <td>점검일시</td>
+    <td>[%TEST_DATE:yyyy년 MM월 dd일 HH시 mm분 ss초]</td>
+  </tr>
+  <tr>
+    <td height="23">특기 사항</td>
+    <td colspan="3">[@SPECIFIC_CONTENTS:특기사항]</td>
+    </tr>
+  <tr>
+    <td colspan="4" class="big_cell_style">
+    [%CONTENT:@CONTENT_HEIGHT]
+    </td>
+  </tr>
+</table>
+</td>
+<td class="cell_around" style="width:50px;">
+</td>
+</tr></table>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+﻿<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>[@REPORT_TITLE]</title>
+<style type="text/css">
+.table_style {
+	border: 2px solid #000;
+	text-align:center;
+	width:100%;
+}
+.table_around{
+	border:none;
+	
+    page-break-after :  avoid;
+    page-break-inside : avoid;
+}
+.cell_around{
+	text-align:center;
+	vertical-align:top;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: center;
+}
+
+td {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	border-left-color: #000;
+	text-align: center;
+	font-size: 11px;
+	margin: 0px;
+	padding: 0px;
+}
+td.greenback{
+	background-color:#eeffee;
+}
+.head_style {
+	font-size: 30px;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+}
+.big_cell_style {
+	text-align: left;
+	vertical-align: top;
+	line-height: 22px;
+	padding: 5px;
+}
+.inner_table_style {
+	border: 1px solid #000;
+	padding: 0px;
+	margin: 0px;
+	width:100%;
+}
+.PASS
+{
+    font-weight:bolder;
+    color:#00CC00;
+}
+.FAIL
+{
+    font-weight:bolder;
+    color:#CC0000;
+}
+</style>
+<link rel="stylesheet" href="externals/dhtmlxchart_full.css"/>
+<script type="text/javascript" src = "externals/dhtmlxchart_full.js"></script>
+<script type="text/javascript" src = "externals/dxchart_maker.js"></script>
+
+<script type="text/javascript">
+<!--
+
+  
+    var drawAllChart = function () {
+        
+        [%CHARTLIST]
+        
+    };
+
+    window.onload = function () {
+        
+        drawAllChart();
+    };
+    //-->
+</script>
+
+</head>
+
+<body>
+
+<table class="table_around" style="width:100%">
+<TR>
+<td height="50" colspan="3" class="cell_around">&nbsp;<!--상단여백--></td>
+</TR>
+
+<tr>
+<td class="cell_around" style="width:50px;"><!--좌측여백--></td>
+<td class="cell_around" width="[@CONTENT_WIDTH]">
+<table border="1" cellpadding="1" cellspacing="0" class="table_style">
+  <tr>
+    <td height="60" colspan="8" class="head_style">유도조종보드/구동보드 통합 검사 성적서</td>
+  </tr>
+  <tr>
+    <td width="50" height="23" style="background-color:#eeffee;">품명</td>
+    <td COLSPAN="2" width="200">[@PRODUCT_NAME:품명]</td>
+	<td width="50" style="background-color:#eeffee;">품번</td>
+    <td width="100" COLSPAN="2">[@PRODUCT_NUM:품번]</td>
+    <td width="50" style="background-color:#eeffee;">일련번호</td>
+    <td width="150">[@ID:일련번호]</td>
+  </tr>
+  <tr>
+    <td height="46" ROWSPAN="2" style="background-color:#eeffee;">시험정보</td>
+	<td height="23" WIDTH="50" style="background-color:#eeffee;">시험목적</td>
+    <td colspan="3" width="170">[@TEST_TARGET:시험목적]</td>
+    <td width="50" style="background-color:#eeffee;">시험조건</td>
+    <td colspan="2">[@TEST_TARGET:시험조건]</td>
+  </tr>
+  <tr>
+    <td height="23" style="background-color:#eeffee;">시험일시</td>
+    <td COLSPAN="3">[%TEST_DATE:yyyy년 MM월 dd일 HH시 mm분 ss초]</td>
+    <td style="background-color:#eeffee;">시험장소</td>
+    <td colspan="2">[@TEST_LOCATION:시험장소]</td>
+  </tr>
+  <tr>
+    <td height="46" rowspan="2" style="background-color:#eeffee;">점검자</td>
+    <td height="23" colspan="5" style="background-color:#eeffee;">소속</td>
+    <td colspan="2" style="background-color:#eeffee;">성명</td>
+  </tr>
+  <tr>
+    <td height="23" colspan="5">[@TESTER_PART:소속]</td>
+    <td colspan="2" style="text-align:right">[@TESTER_NAME:성명] (인)</td>
+  </tr>
+  <tr>
+    <td height="46" rowspan="3" style="background-color:#eeffee;">확인자</td>
+    <td height="23" colspan="5"></td>
+    <td colspan="2" style="text-align:right">(인)</td>
+  </tr>
+  <tr>
+    <td height="23" colspan="5"></td>
+    <td colspan="2" style="text-align:right">(인)</td>
+  </tr>
+  <tr>
+    <td height="23" colspan="5"></td>
+    <td colspan="2" style="text-align:right">(인)</td>
+  </tr>
+  <tr>
+    <td height="52" style="background-color:#eeffee;">특기 사항</td>
+    <td colspan="5">[@SPECIFIC_CONTENTS:특기사항]</td>
+    <td height="52" style="background-color:#eeffee;">종합판정</td>
+    <td colspan="5">[@TOTAL_RESULT:종합판정]</td>
+  </tr>
+  <tr>
+    <td colspan="8" class="big_cell_style">
+    [%CONTENT:@COVER_CONTENT_HEIGHT]
+    </td>
+  </tr>
+  <tr>
+  <td colspan="8" height="28"><img src="externals\add_image.jpg"/></td>
+  </tr>
+  <tr>
+  <td colspan="8" height="15">[%PAGE_NUM]</td>
+  </tr>
+</table>
+</td>
+<td class="cell_around" style="width:50px;">
+</td>
+</tr></table>
+
+</body>
+</html>
